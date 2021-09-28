@@ -2172,8 +2172,8 @@ case 'waifu':
  if (isBanned) return reply('Maaf kamu sudah terbenned!')
  if (args.length == 0) return reply(`Example: ${prefix + command} shino`)
                     query = args.join(" ")
- buff = await getBuffer(`https://hadi-api.herokuapp.com/api/waifusrc?nama={query}`)
- shino.sendMessage(from, buff, image, { quoted: shin})
+ buffer = getBuffer(`https://hadi-api.herokuapp.com/api/waifusrc?nama={query}`)
+ shino.sendMessage(from, buffer, image, { quoted: shin})
                     break
 
 case 'meme':
