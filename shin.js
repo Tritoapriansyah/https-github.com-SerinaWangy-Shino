@@ -2154,7 +2154,7 @@ case 'trap':
                 case 'erokemo':
                 case 'fox_girl':
                 case 'lewdkemo':
-                case 'waifu'
+                case 'waifu':
                 case 'wallpaper':
                 case 'pussy_jpg':
                 case 'kemonomimi':
