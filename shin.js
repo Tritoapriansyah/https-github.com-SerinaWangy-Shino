@@ -5931,7 +5931,7 @@ shino.sendMessage(_.jid,
        case 'me':
        case 'profile':
        if (isBanned) return reply('Maaf kamu sudah terbenned!')
-              ikyy.updatePresence(from, Presence.composing)
+              shino.updatePresence(from, Presence.composing)
               try {
               profil = await shino.getProfilePicture(`${sender.split('@')[0]}@s.whatsapp.net`)
               } catch {
@@ -5942,7 +5942,7 @@ shino.sendMessage(_.jid,
               uptime = process.uptime()
               profile = `-----[ *USER INFO* ]-----\n\n➸ *Username:* ${pushname}\n➸ *Status:* ${thu.status}\n➸ *Premium*: ${isPremium ? 'Ya' : 'No'}\n➸ *Admin*: ${isGroupAdmins ? 'Ya' : 'No'}\n➸ *Prefix :* !\n\n=_=_=_=_=_=_=_=_=_=_=_=_=\n\nYour progress:\n➸ *Level*: ${Levelnye}\n➸ *XP*: ${Xpluu} / ${requiredXplu}`
               buff = await getBuffer(profil)
-              ikyy.sendMessage(from, buff, image, {quoted: shin, caption: profile})
+              shino.sendMessage(from, buff, image, {quoted: shin, caption: profile})
               break
        case 'afk': 
               if (!isGroup) return reply(mess.only.group)
