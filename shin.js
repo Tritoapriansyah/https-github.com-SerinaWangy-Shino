@@ -2144,7 +2144,6 @@ case 'trap':
                 case 'solog':
                 case 'feetg':
                 case 'lewdk':
-                case 'waifu':
                 case 'femdom':
                 case 'cuddle':
                 case 'eroyuri':
@@ -2169,6 +2168,17 @@ case 'trap':
               shino.relayWAMessage(prep)
         
                     break
+case 'waifu':
+ if (isBanned) return reply('Maaf kamu sudah terbenned!')
+ if (args.length == 0) return reply(`Example: ${prefix + command} shino`)
+                    query = args.join(" ")
+ buff = await getBuffer(`https://hadi-api.herokuapp.com/api/waifusrc?nama={query}`)
+ buttons = [{buttonId: `${prefix + command} ${query}`,buttonText:{displayText: `➡️Next`},type:1}]
+              imageMsg = (await shino.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
+              buttonsMessage = {footerText:'© Shino', imageMessage: imageMsg,
+              contentText:`*${query}*`,buttons,headerType:4}
+              prep = await shino.prepareMessageFromContent(from,{buttonsMessage},{quoted: shin})
+              shino.relayWAMessage(prep)
 case 'meme':
 case 'memek':
 					if (isBanned) return reply('Maaf kamu sudah terbenned!')
