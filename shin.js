@@ -2179,6 +2179,8 @@ case 'waifu':
               contentText:`*${query}*`,buttons,headerType:4}
               prep = await shino.prepareMessageFromContent(from,{buttonsMessage},{quoted: shin})
               shino.relayWAMessage(prep)
+
+break
 case 'meme':
 case 'memek':
 					if (isBanned) return reply('Maaf kamu sudah terbenned!')
