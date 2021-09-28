@@ -1,8 +1,0 @@
-$ pkg update && pkg upgrade
-$ termux-setup-storage
-$ pkg install git
-$ pkg install nodejs
-$ pkg install ffmpeg
-$ pkg install imagemagick
-$ git clone https://github.com/SerinaWangy/Shino
-$ npm start
