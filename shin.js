@@ -2097,7 +2097,7 @@ case 'chiisaihentai':
 					if (isBanned) return reply('Maaf kamu sudah terbenned!')          
    if (!isNsfw) return reply('nsfw belum aktif')
                 reply (mess.wait)
-              buff = await getBuffer(`https://api.lolhuman.xyz/api/random/nsfw/${command}?apikey=dikyadis`)
+              buff = await getBuffer(`https://api.lolhuman.xyz/api/random/nsfw/${command}?apikey=${setting.lolkey}`)
               buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}]
               imageMsg = (await shino.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
               buttonsMessage = {footerText:'© Shino', imageMessage: imageMsg,
@@ -2154,6 +2154,7 @@ case 'trap':
                 case 'erokemo':
                 case 'fox_girl':
                 case 'lewdkemo':
+                case 'waifu'
                 case 'wallpaper':
                 case 'pussy_jpg':
                 case 'kemonomimi':
@@ -2168,11 +2169,11 @@ case 'trap':
               shino.relayWAMessage(prep)
         
                     break
-case 'waifu':
+case 'waifuu':
  if (isBanned) return reply('Maaf kamu sudah terbenned!')
  if (args.length == 0) return reply(`Example: ${prefix + command} shino`)
                     query = args.join(" ")
- buffer = getBuffer(`https://hadi-api.herokuapp.com/api/waifusrc?nama={query}`)
+ buffer = await getBuffer(`https://hadi-api.herokuapp.com/api/waifusrc?nama={query}`)
  shino.sendMessage(from, buffer, image, { quoted: shin})
                     break
 
