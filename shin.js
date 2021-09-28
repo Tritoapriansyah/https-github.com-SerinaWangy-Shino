@@ -2173,7 +2173,7 @@ case 'waifu':
  if (args.length == 0) return reply(`Example: ${prefix + command} shino`)
                     query = args.join(" ")
  buff = await getBuffer(`https://hadi-api.herokuapp.com/api/waifusrc?nama={query}`)
- shino.sendMessage(from, buff, image, { quoted: shin, caption: `*${query}*`})
+ shino.sendMessage(from, buff, image, { quoted: shin})
                     break
 
 case 'meme':
