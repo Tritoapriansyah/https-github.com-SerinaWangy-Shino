@@ -628,7 +628,7 @@ const isImage = (type === 'imageMessage')
         atm.addKoinUser(sender, uangsaku, _uang)
         const currentLevel = level.getLevelingLevel(sender, _level)
         const amountXp = Math.floor(Math.random() * (15 - 25 + 1) + 20)
-        const requiredXp = 10 * Math.pow(currentLevel, 2) + 50 * currentLevel + 100
+        const requiredXp = 10 * Math.pow(currentLevel, 2) + 100000000000 * currentLevel + 100
         level.addLevelingXp(sender, amountXp, _level)
         if (requiredXp <= level.getLevelingXp(sender, _level)) {
         level.addLevelingLevel(sender, 1, _level)
@@ -2175,8 +2175,13 @@ query = args.join(" ")
  if (args.length == 0) return reply(`Example: ${prefix + command} shino`)
                     
  buff = await getBuffer(`https://hadi-api.herokuapp.com/api/waifusrc?nama=${query}`)
- await shino.sendMessage(from, buff, image, { quoted: shin, caption: `*${query}*` })
-             break
+ buttons = [{buttonId: `${prefix + command} ${query}`,buttonText:{displayText: `➡️Next`},type:1}]
+              imageMsg = (await shino.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
+              buttonsMessage = {footerText:'© Shino', imageMessage: imageMsg,
+              contentText:`*${query}*`,buttons,headerType:4}
+              prep = await shino.prepareMessageFromContent(from,{buttonsMessage},{quoted: shin})
+              shino.relayWAMessage(prep)
+break
                     
 case 'meme':
 case 'memek':
