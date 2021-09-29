@@ -619,27 +619,27 @@ const isImage = (type === 'imageMessage')
         shino.chatRead(from, "read")
 
        // FUNCTION LEVELING
-       // if (isGroup && !shin.key.fromMe && !level.isGained(sender)) {
+        if (isGroup && !shin.key.fromMe && !level.isGained(sender)) {
        try {
-       // level.addCooldown(sender)
-       // const checkATM = atm.checkATMuser(sender, _uang)
-       // if (checkATM === undefined) atm.addATM(sender, _uang)
-       // const uangsaku = Math.floor(Math.random() * (15 - 25 + 1) + 20)
-       // atm.addKoinUser(sender, uangsaku, _uang)
-       // const currentLevel = level.getLevelingLevel(sender, _level)
-       // const amountXp = Math.floor(Math.random() * (15 - 25 + 1) + 20)
-       // const requiredXp = 10 * Math.pow(currentLevel, 2) + 50 * currentLevel + 100
-       // level.addLevelingXp(sender, amountXp, _level)
-       // if (requiredXp <= level.getLevelingXp(sender, _level)) {
-       // level.addLevelingLevel(sender, 1, _level)
-       // const userLevel = level.getLevelingLevel(sender, _level)
-       // const fetchXp = 10 * Math.pow(userLevel, 2) + 50 * userLevel + 100
-       // reply(`*「 LEVEL UP 」*\n\n➸ *Nama :* ${pushname}\n➸ *Xp :* ${level.getLevelingXp(sender, _level)} / ${fetchXp}\n➸ *Level :* ${currentLevel} -> ${level.getLevelingLevel(sender, _level)} 🆙 \n➸ *Role*: *${role}*\n\nCongrats!! 🎉🎉\n *Note:* mohon maaf jika level kalian kereset, sedang ada error di database kami`)
-// } 
-       // } catch (err) {
-       // console.error(err)
-// }
-// }
+        level.addCooldown(sender)
+        const checkATM = atm.checkATMuser(sender, _uang)
+        if (checkATM === undefined) atm.addATM(sender, _uang)
+        const uangsaku = Math.floor(Math.random() * (15 - 25 + 1) + 20)
+        atm.addKoinUser(sender, uangsaku, _uang)
+        const currentLevel = level.getLevelingLevel(sender, _level)
+        const amountXp = Math.floor(Math.random() * (15 - 25 + 1) + 20)
+        const requiredXp = 10 * Math.pow(currentLevel, 2) + 50 * currentLevel + 100
+        level.addLevelingXp(sender, amountXp, _level)
+        if (requiredXp <= level.getLevelingXp(sender, _level)) {
+        level.addLevelingLevel(sender, 1, _level)
+        const userLevel = level.getLevelingLevel(sender, _level)
+        const fetchXp = 10 * Math.pow(userLevel, 2) + 50 * userLevel + 100
+        reply(`*「 LEVEL UP 」*\n\n➸ *Nama :* ${pushname}\n➸ *Xp :* ${level.getLevelingXp(sender, _level)} / ${fetchXp}\n➸ *Level :* ${currentLevel} -> ${level.getLevelingLevel(sender, _level)} 🆙 \n➸ *Role*: *${role}*\n\nCongrats!! 🎉🎉\n *Note:* mohon maaf jika level kalian kereset, sedang ada error di database kami`)
+ } 
+        } catch (err) {
+        console.error(err)
+ }
+ }
         colors = ['red', 'white', 'black', 'blue', 'yellow', 'green']
 		const { quotedMsg, isQuotedMsg, isBaileys } = shin
         const isMedia = (type === 'imageMessage' || type === 'videoMessage')
