@@ -2170,18 +2170,14 @@ case 'trap':
         
                     break
 case 'waifu':
+query = args.join(" ")
  if (isBanned) return reply('Maaf kamu sudah terbenned!')
  if (args.length == 0) return reply(`Example: ${prefix + command} shino`)
-                    query = args.join(" ")
+                    if (err) return reply(`Maaf,${query} tida di temukan`)
  buff = await getBuffer(`https://hadi-api.herokuapp.com/api/waifusrc?nama=${query}`)
- buttons = [{buttonId: `${prefix + command} ${query}`,buttonText:{displayText: `➡️Next`},type:1}]
-              imageMsg = (await shino.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
-              buttonsMessage = {footerText:'© Shino', imageMessage: imageMsg,
-              contentText:`*${query}*`,buttons,headerType:4}
-              prep = await shino.prepareMessageFromContent(from,{buttonsMessage},{quoted: shin})
-              shino.relayWAMessage(prep)
-        
-                    break
+ await shino.sendMessage(from, buff, image, { quoted: shin, caption: `*${query}*` })
+             break
+                    
 case 'meme':
 case 'memek':
 					if (isBanned) return reply('Maaf kamu sudah terbenned!')
