@@ -2173,7 +2173,7 @@ case 'waifu':
 query = args.join(" ")
  if (isBanned) return reply('Maaf kamu sudah terbenned!')
  if (args.length == 0) return reply(`Example: ${prefix + command} shino`)
-                    if (err) return reply(`Maaf,${query} tida di temukan`)
+                    
  buff = await getBuffer(`https://hadi-api.herokuapp.com/api/waifusrc?nama=${query}`)
  await shino.sendMessage(from, buff, image, { quoted: shin, caption: `*${query}*` })
              break
