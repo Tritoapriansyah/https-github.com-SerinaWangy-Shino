@@ -634,7 +634,7 @@ const isImage = (type === 'imageMessage')
        level.addLevelingLevel(sender, 1, _level)
        const userLevel = level.getLevelingLevel(sender, _level)
        const fetchXp = 10 * Math.pow(userLevel, 2) + 50 * userLevel + 100
-       reply(`*「 LEVEL UP 」*\n\n➸ *Nama :* ${pushname}\n➸ *Xp :* ${level.getLevelingXp(sender, _level)} / ${fetchXp}\n➸ *Level :* ${currentLevel} -> ${level.getLevelingLevel(sender, _level)} 🆙 \n➸ *Role*: *${role}*\n\nCongrats!! 🎉🎉`)
+       reply(`*「 LEVEL UP 」*\n\n➸ *Nama :* ${pushname}\n➸ *Xp :* ${level.getLevelingXp(sender, _level)} / ${fetchXp}\n➸ *Level :* ${currentLevel} -> ${level.getLevelingLevel(sender, _level)} 🆙 \n➸ *Role*: *${role}*\n\nCongrats!! 🎉🎉\n *Note:* mohon maaf jika level kalian kereset, sedang ada error di database kami`)
 } 
        } catch (err) {
        console.error(err)
