@@ -5077,8 +5077,12 @@ a += `\`\`\`Title : ${i.title}\`\`\`
       case 'level':
 reply('mohon maaf, database kami sedang bermasalah untuk sementara !level di nonaktifkan!!')
 break
-       case 'leaderboard': //Cek Leaderboard
-       case 'lb':
+case 'lb':
+case 'leaderboard':
+reply('mohon maaf, database kami sedang bermasalah untuk sementara !level di nonaktifkan!!')
+break
+       case 'leaderboard2': //Cek Leaderboard
+       case 'lb2':
 					if (isBanned) return reply('Maaf kamu sudah terbenned!')
               if (!isGroup) return reply(mess.only.group) 
               const resp = _level
