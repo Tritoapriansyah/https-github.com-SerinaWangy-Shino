@@ -628,12 +628,12 @@ const isImage = (type === 'imageMessage')
         atm.addKoinUser(sender, uangsaku, _uang)
         const currentLevel = level.getLevelingLevel(sender, _level)
         const amountXp = Math.floor(Math.random() * (151 - 243 + 19) + 289)
-        const requiredXp = 10 * Math.pow(currentLevel, 2) + 2912 * currentLevel + 1988
+        const requiredXp = 1200 * Math.pow(currentLevel, 2) + 2912 * currentLevel + 1988
         level.addLevelingXp(sender, amountXp, _level)
         if (requiredXp <= level.getLevelingXp(sender, _level)) {
         level.addLevelingLevel(sender, 1, _level)
         const userLevel = level.getLevelingLevel(sender, _level)
-        const fetchXp = 10 * Math.pow(userLevel, 2) + 2912 * userLevel + 1988
+        const fetchXp = 1200 * Math.pow(userLevel, 2) + 2912 * userLevel + 1988
         reply(`*「 LEVEL UP 」*\n\n➸ *Nama :* ${pushname}\n➸ *Xp :* ${level.getLevelingXp(sender, _level)} / ${fetchXp}\n➸ *Level :* ${currentLevel} -> ${level.getLevelingLevel(sender, _level)} 🆙 \n➸ *Role*: *${role}*\n\nCongrats!! 🎉🎉\n *Note:* mohon maaf jika level kalian kereset, sedang ada error di database kami`)
  } 
         } catch (err) {
@@ -885,7 +885,7 @@ const isVideo = (type === 'videoMessage')
 			//////
 			let Levelnye = level.getLevelingLevel(sender, _level)
               let Xpluu = level.getLevelingXp(sender, _level)
-              let requiredXplu = 10 * Math.pow(Levelnye, 2) + 2912 * Levelnye + 1988
+              let requiredXplu = 1200 * Math.pow(Levelnye, 2) + 2912 * Levelnye + 1988
 			ind = {
 				wait: `⌛ Sedang di Prosess ⌛`,
 				success: `✔️ Berhasil ✔️`,
