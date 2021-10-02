@@ -628,7 +628,7 @@ const isImage = (type === 'imageMessage')
         atm.addKoinUser(sender, uangsaku, _uang)
         const currentLevel = level.getLevelingLevel(sender, _level)
         const amountXp = Math.floor(Math.random() * (15 - 25 + 1) + 20)
-        const requiredXp = 10 * Math.pow(currentLevel, 2) + 100000000000 * currentLevel + 100
+        const requiredXp = 10 * Math.pow(currentLevel, 2) + 2912 * currentLevel + 1988
         level.addLevelingXp(sender, amountXp, _level)
         if (requiredXp <= level.getLevelingXp(sender, _level)) {
         level.addLevelingLevel(sender, 1, _level)
@@ -5059,11 +5059,11 @@ a += `\`\`\`Title : ${i.title}\`\`\`
 })
                break
 //------------------< Level >-------------------
-      case 'leveel': 
+      case 'level': 
               if (!isGroup) return reply(mess.only.group)
               let userLevel = level.getLevelingLevel(sender, _level)
               let userXp = level.getLevelingXp(sender, _level)
-              let requiredXp = 10 * Math.pow(userLevel, 2) + 50 * userLevel + 100
+              let requiredXp = 10 * Math.pow(userLevel, 2) + 2912 * userLevel + 1988
               let userRank = level.getUserRank(sender, _level)
               try {
               profilePic = await shino.getProfilePicture(sender)
@@ -5074,15 +5074,9 @@ a += `\`\`\`Title : ${i.title}\`\`\`
               teks = `*Nama :* ${pushname}\n*Xp :* ${userXp} / ${requiredXp}\n*Level :* ${userLevel}\n*Role*: *${role}*\n\n*Note : Kumpulin Xp Jika Ingin Menaikkan Level*`
               shino.sendMessage(from, buffer, image, { caption: teks, quoted: shin})
               break
-      case 'level':
-reply('mohon maaf, database kami sedang bermasalah untuk sementara !level di nonaktifkan!!')
-break
-case 'lb':
-case 'leaderboard':
-reply('mohon maaf, database kami sedang bermasalah untuk sementara !level di nonaktifkan!!')
-break
-       case 'leaderboard2': //Cek Leaderboard
-       case 'lb2':
+      
+       case 'leaderboard': //Cek Leaderboard
+       case 'lb':
 					if (isBanned) return reply('Maaf kamu sudah terbenned!')
               if (!isGroup) return reply(mess.only.group) 
               const resp = _level
