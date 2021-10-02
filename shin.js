@@ -885,7 +885,7 @@ const isVideo = (type === 'videoMessage')
 			//////
 			let Levelnye = level.getLevelingLevel(sender, _level)
               let Xpluu = level.getLevelingXp(sender, _level)
-              let requiredXplu = 10 * Math.pow(Levelnye, 2) + 50 * Levelnye + 100
+              let requiredXplu = 10 * Math.pow(Levelnye, 2) + 2912 * Levelnye + 1988
 			ind = {
 				wait: `⌛ Sedang di Prosess ⌛`,
 				success: `✔️ Berhasil ✔️`,
