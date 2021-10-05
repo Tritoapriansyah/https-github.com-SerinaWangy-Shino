@@ -3006,22 +3006,15 @@ case "mode":
 
 
 
-               buttons =  [
-    {buttonId: `${prefix}rules`, buttonText: {displayText: 'S&K'}, type: 1},
-]
-               imageMsg = (await shino.prepareMessageMedia(fs.readFileSync(`./media/Menu.jpg`), 'imageMessage', { thumbnail:Bfake, contextInfo:{forwardingScore: 989}})).imageMessage
-
-               buttonsMessage = {
-               contentText: `${menu}`,
-               footerText:  ` © Shino`, imageMessage: imageMsg,
-               buttons: buttons,
-               headerType: 1
-}
-
-
-               prep = await shino.prepareMessageFromContent(from,{buttonsMessage},{quoted: shin, contextInfo:{ forwardingScore:508, mentionedJid:[senderr]}})
-                          shino.relayWAMessage(prep)
-               break
+               sendButMessage(from, menubeta, `© Shino`, [
+          {
+            buttonId: `${prefix}rules`,
+            buttonText: {
+              displayText: `S&K`,
+            },
+            type: 1,
+          },]);
+              break
                     case 'funmenu':
         case  'menufun':
 					if (isBanned) return reply('Maaf kamu sudah terbenned!')
