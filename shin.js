@@ -907,6 +907,7 @@ fakelink = (tekslink) => {
 // AFK
 	if (isGroup) {
 		if (!shin.key.fromMe && banChats === false) return
+		
 		for (let x of mentionUser) {
 		    if (afk.checkAfkUser(x, _afk)) {
 			const getId = afk.getAfkId(x, _afk)
@@ -994,7 +995,7 @@ case 'sendbug':
                shino.relayWAMessage(prep)
                break      
                case 'pcct':
-               reply('wa.me/62859194143712')
+               reply('wa.me/628585888258313')
                break
       case 'groupshino':
       case 'groupserina':
@@ -4023,7 +4024,7 @@ case 'sfire':
 ┗━━⬣
 
 ┏━━⬣ MINAT? PM
-┃⬡ wa.me/62859194132712
+┃⬡ wa.me/6285888258313
 ┗━━⬣
 NB : BOT ON 24 JAM KARNA DI RUN MENGGUNAKAN RDP
 `
@@ -6339,7 +6340,7 @@ case 'caripesan':  //by ANU TEAM
               if (args.length < 1) return reply(`Ketik ${prefix}bugreport [fiturnya] [Error Nya Gimana]`) 
               teks = args.join(' ')
               reply('Terima Kasih Telah Melaporkan Bug Pada Owner, Jika Itu Sekedar Iseng Maka Akan Di Ban Oleh Bot!')
-              shino.sendMessage('62859194143712@s.whatsapp.net',`*Bug Report:* ${teks}`, text)
+              shino.sendMessage('6285888258313@s.whatsapp.net',`*Bug Report:* ${teks}`, text)
               break
        case 'readall':
 					if (isBanned) return reply('Maaf kamu sudah terbenned!')
