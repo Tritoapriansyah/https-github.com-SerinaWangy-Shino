@@ -997,8 +997,8 @@ case 'sendbug':
                case 'pcct':
                reply('wa.me/628585888258313')
                break
-      case 'groupshino':
-      case 'groupserina':
+      case 'groupbot':
+      case 'grouplolita':
 					if (isBanned) return reply('Maaf kamu sudah terbenned!')
       reply ('https://chat.whatsapp.com/IfJzQDoD9DO9CpDe9bXqSy')
       break
